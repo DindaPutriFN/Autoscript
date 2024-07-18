@@ -201,6 +201,9 @@ COMING SOON
 - Always Use HTTPS : OFF
 - UNDER ATTACK MODE : OFF
 ```
+
+## Uptime Status
+- [@UPTIME](https://status.org.cn/)
 </details>
 
 <b><details><summary>API</summary></b>
