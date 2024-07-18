@@ -24,8 +24,7 @@ COMING SOON
 </details>
 
 <b><details><summary>Service & Port</summary></b> 
- <p align="center"> 
- <img src="https://telegra.ph/file/5ea099c50949711920149.jpg"/> 
+ <p align="center">
 <img src="https://img.shields.io/badge/-Services%20%26%20Port-brightgreen"> 
 
 # SSH
@@ -116,91 +115,34 @@ COMING SOON
 ```
 </details>
 
-<b><details><summary>INFO</summary></b> 
-## Info  
- ```diff 
- - HAPROXY OVER TCP, GOPROXY WS V2RAY, APACHE2 SSH WEBSOCKET, XRAY MOD, SSLH MOD
- - TELEGRAM= @Rerechan02 / @fn_project
- ``` 
- - made by the owner (Rerechan02),  
-  
- - Xray mod dharak, haproxy over tcp for ssh ssl, Goproxy ws use in xray, nginx for loadbalancer, apache2 use in ssh websocket, sslh mod support ssh ws http port 80 
- - Haproxy Over TCP lebih ringan dibandingkan nginx, dan goproxy cocok untuk digunakan pada xray, untuk apache2 hanya akan di gunakan pada ssh websocket  
- ```diff 
- -  
- - Need Permision To Use Script
- ```
+<b><details><summary>Info</summary></b> 
+## Info
+```diff
+- SSLH Mod FunnyVPN
+- WebAPI with Curl
+- Telegram Owner    : @Rerechan02 / @fn_project
+```
+- Script created by @Rerechan02 X @PR_Aiman [ FN Project Team ]
+- SSLH core mod by FunnyVPN Atuoscript 1.2
+- X-Ray Core use Xray Core Original @Lastest Version
+- WebAPI use curl METHOD: POST, GET & DELETE
+```diff
+- Autoscript Free Version 1.4
+- Autoscript By FN Project Team
+- Autoscript This does not require permission to use it
+- I really hate people who decrypt this script, if you decrypt it you should include credits
+```
 
-## Credit : 
-  
- -   Owner Rerechan02  
- -   Original Script by FunnyVPN & Github
- -   Modded and update Script by Rerechan™
-  
-  
-  
-  
+## Dev :
+- [@Rerechan02](https://t.me/Rerechan02)
+- [@PR_Aiman](https://github.com/praiman99)
+- [@L Aditya](https://t.me/farell_aditya_ardian)
+- [@FN Project](https://t.me/fn_project)
+
      <p align="center"><img src="https://img.shields.io/badge/%20COPYRIGHT%20%C2%A9%202023-%20By%20Rerechan02%20『𝐅𝐍』%2C%20Inc-blue"></p> 
  <b> 
  </b> 
  <br> 
-</details>
-
-<b><details><summary>Other</summary></b> 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ffisabiliyusri%2FMantap&count_bg=%2379C83D&title_bg=%23555555&icon=monster.svg&icon_color=%23FF0000&title=Di+Lihat&edge_flat=false)](https://hits.seeyoufarm.com) 
- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/fisabiliyusri/Mantap&count_bg=%2379C83D&title_bg=%23555555&icon=angularjs.svg&icon_color=%23FF0000&title=Di+Lihat&edge_flat=false)](https://hits.seeyoufarm.com) 
- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ffisabiliyusri%2FMantap&count_bg=%2379C83D&title_bg=%23555555&icon=notion.svg&icon_color=%2301021C&title=Di+Lihat&edge_flat=false)](https://hits.seeyoufarm.com) 
- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ffisabiliyusri%2FMantap&count_bg=%2379C83D&title_bg=%23555555&icon=t-mobile.svg&icon_color=%23FAC805&title=Di+Lihat&edge_flat=true)](https://hits.seeyoufarm.com) 
- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/fisabiliyusri/Mantap&count_bg=%2379C83D&title_bg=%23555555&icon=angular.svg&icon_color=%2338FF00&title=Di+Lihat&edge_flat=false)](https://hits.seeyoufarm.com) 
- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/fisabiliyusri/Mantap&count_bg=%2379C83D&title_bg=%23555555&icon=pixiv.svg&icon_color=%2300BDFF&title=Di+Lihat&edge_flat=false)](https://hits.seeyoufarm.com)
-
-# 💻 Tech Stack: 
- ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=plastic&logo=amazon-aws&logoColor=white) ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=plastic&logo=azure-devops&logoColor=white) ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=plastic&logo=Cloudflare&logoColor=white) ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-%230167ff.svg?style=plastic&logo=digitalOcean&logoColor=white) ![Google Cloud](https://img.shields.io/badge/Google%20Cloud-%234285F4.svg?style=plastic&logo=google-cloud&logoColor=white) ![OpenStack](https://img.shields.io/badge/Openstack-%23f01742.svg?style=plastic&logo=openstack&logoColor=white) ![Scaleway](https://img.shields.io/badge/SCALEWAY-%234f0599.svg?style=plastic&logo=scaleway&logoColor=white) 
-
-### 
-  
- <h2 align="left">🛠 Language and tools</h2> 
-  
- ### 
-  
- <div align="left"> 
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" height="40" alt="ubuntu logo"  /> 
-   <img width="12" /> 
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/putty/putty-original.svg" height="40" alt="putty logo"  /> 
-   <img width="12" /> 
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="40" alt="linux logo"  /> 
-   <img width="12" /> 
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="java logo"  /> 
-   <img width="12" /> 
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" height="40" alt="azure logo"  /> 
-   <img width="12" /> 
-   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" height="40" alt="windows8 logo"  /> 
- </div> 
-  
- ###
-[![My Skills](https://skillicons.dev/icons?i=java,linux,js,html,css,python,php,bash,azure,docker,gcp)](https://skillicons.dev)
-
- # 📊 GitHub Stats: 
- ![](https://github-readme-stats.vercel.app/api?username=rullpqh&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/> 
- ![](https://github-readme-streak-stats.herokuapp.com/?user=rullpqh&theme=dark&hide_border=false)<br/> 
- ![](https://github-readme-stats.vercel.app/api/top-langs/?username=rullpqh&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact) 
-  
- ### ✍️ Random Dev Quote 
- ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight) 
-  
- --- 
- 
-## (ANALYSIS) 
- <p align="center"> 
-  
- <a href="https://github.com/Rerechan02"> 
-  
-   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=Rerechan02&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/> 
-  
-   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=Rerechan02&layout=compact&langs_count=8&theme=algolia"/> 
-  
- </a> 
- </p>
 </details>
 
 <b><details><summary>Syarat System</summary></b> 
@@ -243,16 +185,29 @@ COMING SOON
 - 1vCPU
 </details>
 
-<b><details><summary>API</summary></b>
+<b><details><summary>Other Detail</summary></b>
+### Base Code
+[Source](https://t.me/fn_project/392)
 
+### STATUS
+`@Lastest 1.4`
+
+### SETTING CLOUDFLARE
+```
+- SSL/TLS : FULL
+- SSL/TLS Recommender : ON
+- GRPC : ON
+- WEBSOCKET : ON
+- Always Use HTTPS : OFF
+- UNDER ATTACK MODE : OFF
+```
 </details>
 
-<b><details><summary>Contact Me :v</summary></b>
-## don't forget to join
-[![Join WhatsApp Group 1](https://img.shields.io/badge/Join-WhatsApp%20Group1-bl.svg?logo=WhatsApp)](https://chat.whatsapp.com/LlJmbvSQ2DsHTA1EccNGoO)
-[![Join WhatsApp Group 2](https://img.shields.io/badge/Join-WhatsApp%20Group2-bl.svg?logo=WhatsApp)](https://chat.whatsapp.com/JcwmcqMAFlG4MhALblHsig)
-[![Join Telegram Chanel](https://img.shields.io/badge/Join-Telegram%20Chanel-bl.svg?logo=Telegram)](https://t.me/fn_project)
-[![Join Telegram Group](https://img.shields.io/badge/Join-Telegram%20Group-bl.svg?logo=Telegram)](https://t.me/Rerechan0022)
+<b><details><summary>API</summary></b>
+</details>
+
+<b><details><summary>Donate</summary></b>
+
 </details>
 
 ![image](https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png)<br></html>
@@ -262,8 +217,8 @@ COMING SOON
 </p>
 
 
-## Lisensi
-
+## License
+Repository ini dilindungi oleh lisensi [PAK POLISI](https://satpolpp.kebumenkab.go.id/index.php)
 Karya ini dilisensikan di bawah [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
 
 ![Lisensi Creative Commons](https://mirrors.creativecommons.org/presskit/icons/cc.svg)
