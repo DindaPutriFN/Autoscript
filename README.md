@@ -125,6 +125,7 @@ tmux attach-session -t fn
 - Change Timezone Server
 - Update Kernel OS New Version
 - Backup & Restore Via Link & FTP
+- Plugin Hide SSH store
 ```
 </details>
 
