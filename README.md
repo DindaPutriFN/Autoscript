@@ -336,7 +336,7 @@ Rerechan02 text cannot be replaced by other text, if it is changed then authenti
 - PR_Aiman [donate](https://sociabuzz.com/praiman/tribe?_ref=li>)
 - Paypal: `melon3344556@gmail.com`
 - TON Network: `UQBoVC_vTCo6e2IVV1T21gyj0BVLaMwDd4qeooNjKaFQDl9j`
-If you transfer via PayPal, please select the As Family option
+`If you transfer via PayPal, please select the As Family option`
 </details>
 
 ![image](https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png)<br></html>
