@@ -9,6 +9,13 @@
 ![Rerechan02 card name](https://cardivo.vercel.app/api?name=Rerechan02『𝐅𝐍』&description=Hi,%20everyone!%20and%20Nice%20to%20meet%20you%20%F0%9F%91%8B&image=https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny1.jpg?v=4&backgroundColor=%23ecf0f1&telegram=/&github=Rerechan02&pattern=leaf&colorPattern=%23eaeaea)
 
 <b><details><summary>Install Script</summary></b>
+`things needed before installing`
+```
+- Virtual Private Server [ VPS ]
+- Subdomain / Domain Server
+- API Bot Telegram
+- ID Telegram Owner VPS
+```
 ***ROOT***
 ``` 
 sudo su
@@ -21,6 +28,10 @@ apt update -y; apt upgrade -y; apt install gnupg tmux -y; tmux new -s fn
 ```
 COMING SOON
 ```
+***If there is a disconnection during installation***
+ ```
+tmux attach-session -t fn
+ ```
 </details>
 
 <b><details><summary>Service & Port</summary></b> 
@@ -279,9 +290,23 @@ https://rerechan.ai/api/addssh
 ```
 
 ### API Need
+`create`
 ```
 SSH: username, password, expired
 X-Ray: username, expired
+```
+`delete`
+```
+ssh: username
+xray: username
+```
+`cek login`
+```
+-
+```
+`list member`
+```
+-
 ```
 
 ### OTHER
