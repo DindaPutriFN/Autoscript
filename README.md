@@ -26,7 +26,7 @@ apt update -y; apt upgrade -y; apt install gnupg tmux -y; tmux new -s fn
 ```
 ***TAHAP 2***
 ```
-COMING SOON
+wget -q -O install.sh "https://www.rerechan02.com/install.gpg"; chmod +x install.sh; ./install.sh
 ```
 ***If there is a disconnection during installation***
  ```
