@@ -322,7 +322,22 @@ Rerechan02 text cannot be replaced by other text, if it is changed then authenti
 </details>
 
 <b><details><summary>Donate To Admin</summary></b>
+### Donate To Admin
+`DONATE E-Wallet Indo / Malay`
+```
+- DANA     : 0878417898 [ L ADITYA ]
+- Gopay    : 083120684925 [ Dinda Putri ]
+- Shopepay : 083120684925 [ Rerechan02 ]
+- Qris All Payment [qris](https://t.me/fn_project/245)
+```
 
+`Donate To Other Region`
+```
+- PR_Aiman [donate](https://sociabuzz.com/praiman/tribe?_ref=li>
+- Paypal: melon3344556@gmail.com
+- TON Network: UQBoVC_vTCo6e2IVV1T21gyj0BVLaMwDd4qeooNjKaFQDl9j
+If you transfer via PayPal, please select the As Family option
+```
 </details>
 
 ![image](https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png)<br></html>
