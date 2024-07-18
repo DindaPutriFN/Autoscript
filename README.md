@@ -27,115 +27,93 @@ COMING SOON
  <p align="center"> 
  <img src="https://telegra.ph/file/5ea099c50949711920149.jpg"/> 
 <img src="https://img.shields.io/badge/-Services%20%26%20Port-brightgreen"> 
-  
+
 # SSH
 ```
- - OpenSSH                    : 22, 3303, 53
- - SSH SSL/TLS                : 443, 777
- - Dropbear                   : 109, 111
- - WebScket Apache2 HTTP      : 80, 2082, 2080
- - WebScket Apache2 SSL/TLS   : 443
- - Udp Custom & Request       : 1-65535
+- OpenSSH          : 22, 3303, 53
+- Dropbear         : 109, 111
+- Stunnel          : 443, 777
+- Websocket HTTP   : 80, 2082, 2080
+- Websocket HTTPS  : 443
+- UDP Custom       : 1-65535
 ```
 
-# OPENVPN
+# OpenVPN
 ```
-OPENVPN TCP  : 1194
-OPENVPN UDP  : 22000
-OEPNVPN WS   : 2096
-```
- 
-# XRAY MOD
-```
-- XRAY VMESS WS NON TLS      : 80, 8880
-- XRAY VLESS WS NON TLS      : 80, 8880
-- XRAY SOCKS5 WS NON TLS     : 80, 8880
-- XRAY VMESS WS TLS/SSL      : 443, 2096
-- XRAY VLESS WS TLS/SSL      : 443, 2096
-- XRAY TROJAN WS TLS/SSL     : 443, 2096
-- XRAY SOCKS5 WS TLS/SSL     : 443, 2096
-- GOPROXY WEBSOCKET & TCP    : 80, 8880, 8080 & 443, 8443, 2096
+- TCP       : 1194
+- UDP       : 2200
+- WebSocket : 2096
 ```
 
-# V2RAY
+# X-Ray WebSocket
 ```
-- V2RAY VMESS WS NON TLS      : 80, 8080, 8880
-- V2RAY VLESS WS NON TLS      : 80, 8080, 8880
-- V2RAY VMESS WS TLS/SSL      : 443, 2096, 8443
-- V2RAY VLESS WS TLS/SSL      : 443, 2096, 8443
-- V2RAY TROJAN WS TLS/SSL     : 443, 2096, 8443
-```
-
-# OVER TCP XTLS
-```
-- SSH SSL/TLS 1.0 - 1.3   : 443
-- HAPROXY OVER TCP        : 443
-- GOPROXY OVER TCP        : 443
+- Vmess       : 80, 8880, 443
+- Vless       : 80, 443
+- Trojan      : 80, 443
+- Socks5      : 80, 443
+- Shadowsocks : 80, 443
 ```
 
-# OTHER
+# X-Ray HTTP UPGRADE
 ```
-- GRPC     : 443
-- NGINX    : 81, 89
-- UDPGW    : 7200, 7300
-- HAPROXY  : 443
-- GOPROXY  : 443, 80, 8080
-- APACHE2  : 443, 80, 1080, 5153
-- SSLH MOD : 111, 700, 777
-- SLOWDNS  : 53, 5300, 3139, 3030
-- IGNITER  : 2087
+- Vmess  : 443, 80
+- Vless  : 443, 80
+- Trojan : 443, 80
 ```
 
-# PATH XRAY SERVICE
+# Other
 ```
-- VMESS    : /vmess /custom [ custom path ]
-- VLESS    : /vless
-- TROJAN   : /trojan-ws
-- IGNITER  : /igniter-go
-- SOCKS5   : /socks5
-```
-
-# PATH V2RAY SERVICE
-```
-- VMESS    : /vmessws
-- VLESS    : /vlessws
-- TROJAN   : /trojan
+- API     : -
+- Nginx   : -
+- SSLH    : 8062
+- gRPC    : 443
+- BadVPN  : 7300
+- SlowDNS : 5300
 ```
 
 # PATH SSH
 ```
-- SSH WEBSOCKET : /
-- SSH DROPBEAR  : /
-- SSH TCP SSL   : /
-- SSH DIRECT    : /
-- OPENSSH       : -
+- OpenSSH  : /custom
+- Dropbear : /custom
+- Stunnel4 : /custom
+- Websocket HTTP  : /custom
+- Websocket HTTPS : /custom
 ```
 
-# CORE ALL SERVICE
+# PATH X-RAY WebSocket
 ```
-- SSLH CORE FunnyVPN
-- XRAY CORE MOD DHARAK
-- V2RAYFLY CORE V2RAY
-- GOPROXY MOD CORE
-- HAPROXY ORIGIN CORE
-- APACHE2 ORIGIN CORE
-```
-
-# FEATURE
-```
-- CHANGE DNS SERVER
-- BLOCK ACCSES TORENT
-- INSTALL TCP BBR
-- ANTI DDOS PROTECTION
-- ACOUNT SUPPORT GAMING
-- ACOUNT SUPPORT OPENWRT
-- LIMI SPEED / BANDWIDTH
-- CEK USER LOGIN - ALL METODE
-- TURN ON & OFF SERVICE IN MENU
-- SERVICE STREAMING SUPPORT CHEKER
-- CEK ALL SERVICE RUNNING OR NOT FOR ABOUT
+- Vmess       : /vmess  | /vmessws | /custom
+- Vless       : /vless  | /vlessws
+- Trojan      : /trojan | /trojanws
+- Socks5      : /socks5 | /socks5ws
+- Shadowsocks : /ssws
 ```
 
+# PATH X-RAY HTTPUPGRADE
+```
+- Vmess  : /love  | /love-dinda
+- Vless  : /rere  | /rere-cantik
+- Trojan : /dinda | /dindaputri  | /dinda-cantik
+```
+
+# Core All Service
+```
+- Websocket Python
+- Websocket Enhanced
+- Websocket WsEpro
+- SSLH Mod FunnyVPN 1.2
+- X-Ray Default Core @Lastest
+- Proxy Server Python3
+```
+
+# Feature
+```
+- Cek Usage | htop
+- Bot Notification
+- Change Timezone Server
+- Update Kernel OS New Version
+- Backup & Restore Via Link & FTP
+```
 </details>
 
 <b><details><summary>INFO</summary></b> 
