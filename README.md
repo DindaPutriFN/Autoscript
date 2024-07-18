@@ -8,7 +8,7 @@
 
 ![Rerechan02 card name](https://cardivo.vercel.app/api?name=Rerechan02『𝐅𝐍』&description=Hi,%20everyone!%20and%20Nice%20to%20meet%20you%20%F0%9F%91%8B&image=https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny1.jpg?v=4&backgroundColor=%23ecf0f1&telegram=/&github=Rerechan02&pattern=leaf&colorPattern=%23eaeaea)
 
-<b><details><summary>INSTALL</summary></b>
+<b><details><summary>Install Script</summary></b>
 ***ROOT***
 ``` 
 sudo su
@@ -115,7 +115,7 @@ COMING SOON
 ```
 </details>
 
-<b><details><summary>Info</summary></b> 
+<b><details><summary>Information</summary></b> 
 ## Info
 ```diff
 - SSLH Mod FunnyVPN
@@ -145,7 +145,7 @@ COMING SOON
  <br> 
 </details>
 
-<b><details><summary>Syarat System</summary></b> 
+<b><details><summary>System Support</summary></b> 
 ### System Support
 # Debian:
 - 9 ( Stretch )
@@ -206,10 +206,10 @@ COMING SOON
 - [@UPTIME](https://status.org.cn/)
 </details>
 
-<b><details><summary>API</summary></b>
+<b><details><summary>WebAPI Docs</summary></b>
 </details>
 
-<b><details><summary>Donate</summary></b>
+<b><details><summary>Donate To Admin</summary></b>
 
 </details>
 
