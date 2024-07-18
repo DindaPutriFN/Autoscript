@@ -207,6 +207,93 @@ COMING SOON
 </details>
 
 <b><details><summary>WebAPI Docs</summary></b>
+## WebAPI
+
+### Key
+`/etc/xray/.key`
+```
+Default Key: mlbb
+Change Key: nano /etc/xray/.key
+After Change Key: systemctl daemon-reload; systemctl restart server
+```
+
+### LOG
+`/etc/xray/api.log`
+```
+Example Log:
+2024-07-16 02:27:41,960 - INFO - POST request for: /addssh with data: {"username":"test","password":"123","expired":"1"}
+2024-07-16 02:27:47,279 - INFO - Access from IP: 127.0.0.1, User-Agent: curl/8.7.1
+2024-07-16 02:27:47,280 - INFO - Successfully executed script: /etc/funny/.fnproject/api/addssh
+```
+
+### METHOD
+```
+- GET
+- POST
+- DELETE
+```
+
+### PATH Create Account
+`METHOD: POST`
+```
+- /addssh      [ Create SSH Account ]
+- /add-vmess   [ Create Vmess Account ]
+- /add-vless   [ Create Vless Account ]
+- /add-trojan  [ Create Trojan Account ]
+- /add-socks   [ Create Socks5 Account ]
+- /add-ss      [ Create Shadowsocks Account ]
+```
+
+### PATH Delete Account
+`METHOD: DELETE`
+```
+- /delete-ssh  [ Delete SSH Account Only ]
+- /delete-xray [ Delete X-Ray Account ]
+- X-RAY:
+         - Vmess
+         - Vless
+         - Trojan
+         - Socks5
+         - Shadowsocks5
+```
+
+### PATH List Account
+`METHOD: GET`
+```
+- /list-ssh [ SSH Account Active ]
+- /list-xray [ X-Ray Account Active ]
+```
+
+### Cek User Login
+`METHOD: GET`
+```
+- /cek-ssh [ Cek User Usage SSH ]
+- /cek-xray [ Cek User Usage X-Ray ]
+```
+
+### Domain API
+`your-domain.com/api/path`
+```
+Example:
+https://rerechan.ai/api/addssh
+```
+
+### API Need
+```
+SSH: username, password, expired
+X-Ray: username, expired
+```
+
+### OTHER
+```
+Output:
+- json
+
+Auth:
+- -H "Authorization: Rerechan02 your-key"
+Rerechan02 text cannot be replaced by other text, if it is changed then authentication will not be successful
+```
+
 </details>
 
 <b><details><summary>Donate To Admin</summary></b>
