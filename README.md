@@ -137,7 +137,7 @@ tmux attach-session -t fn
 - Telegram Owner    : @Rerechan02 / @fn_project
 ```
 - Script created by @Rerechan02 X @PR_Aiman [ FN Project Team ]
-- SSLH core mod by FunnyVPN Atuoscript 1.2
+- SSLH core mod by FunnyVPN Autoscript 1.2
 - X-Ray Core use Xray Core Original @Lastest Version
 - WebAPI use curl METHOD: POST, GET & DELETE
 ```diff
