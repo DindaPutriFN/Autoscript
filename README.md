@@ -42,10 +42,10 @@ tmux attach-session -t fn
 
 # SSH
 ```
-- OpenSSH          : 22, 3303, 53
-- Dropbear         : 109, 111
-- Stunnel          : 443, 777
-- Websocket HTTP   : 80, 2082, 2080
+- OpenSSH          : 22, 3303, 53, 443
+- Dropbear         : 109, 111, 69
+- Stunnel          : 443
+- Websocket HTTP   : 80, 2082
 - Websocket HTTPS  : 443
 - UDP Custom       : 1-65535
 ```
@@ -54,7 +54,9 @@ tmux attach-session -t fn
 ```
 - TCP       : 1194
 - UDP       : 2200
-- WebSocket : 2096
+- WebSocket HTTPS : 443
+- WebSocket HTTP  : 80
+- SSL/TLS/STUNNEL : 443 
 ```
 
 # X-Ray WebSocket
@@ -67,6 +69,13 @@ tmux attach-session -t fn
 ```
 
 # X-Ray HTTP UPGRADE
+```
+- Vmess  : 443, 80
+- Vless  : 443, 80
+- Trojan : 443, 80
+```
+
+# X-Ray Split HTTP
 ```
 - Vmess  : 443, 80
 - Vless  : 443, 80
@@ -108,12 +117,19 @@ tmux attach-session -t fn
 - Trojan : /dinda | /dindaputri  | /dinda-cantik
 ```
 
+# PATH X-Ray Split HTTP
+```
+- Vmess  : /vmess-split
+- Vless  : /vless-split
+- Trojan : /trojan-split
+```
+
 # Core All Service
 ```
 - Websocket Python
 - Websocket Enhanced
 - Websocket WsEpro
-- SSLH Mod FunnyVPN 1.2
+- SSLH Fork Original Core
 - X-Ray Default Core @Lastest
 - Proxy Server Python3
 ```
