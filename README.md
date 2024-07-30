@@ -156,7 +156,7 @@ tmux attach-session -t fn
 - X-Ray Core use Xray Core Original @Lastest Version
 - WebAPI use curl METHOD: POST, GET & DELETE
 ```diff
-- Autoscript Free Version 1.4
+- Autoscript Free Version 1.5
 - Autoscript By FN Project Team
 - Autoscript This does not require permission to use it
 - I really hate people who decrypt this script, if you decrypt it you should include credits
