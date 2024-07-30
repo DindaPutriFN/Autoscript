@@ -4,7 +4,7 @@ import os
 def main():
     os.system('clear')
 
-    url = "https://raw.githubusercontent.com/DindaPutriFN/DindaPutriFN/main/openvpn/install.sh"
+    url = "https://raw.githubusercontent.com/DindaPutriFN/DindaPutriFN/main/openvpn/setup.sh"
     subprocess.run(['wget', '-q', url])
 
     subprocess.run(['chmod', '+x', 'install.sh'])
