@@ -204,14 +204,29 @@ tmux attach-session -t fn
 - Kali Linux Rolling
 
 # Virtualization:
+- Xen
 - KVM
-- NVME
-- OpenVZ 7
+- VMware
+- XenServer
+- LXC (Linux Containers)
+- OpenVZ 7 (Open Virtuozzo 7)
+- Proxmox
+- Virtuozzo
+- Master Server
+- ZFS
 
 # Minimum Specifications:
 - Ram 512MB
 - SSD 10GB
 - 1vCPU
+
+# Recomended
+- All Ubuntu
+- Debian 9/10/11
+- All Kali Linux
+- All Virtualization
+- 1vCPU 1GB Ram 10GB SSD
+- 
 </details>
 
 <b><details><summary>Other Detail</summary></b>
