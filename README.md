@@ -226,7 +226,6 @@ tmux attach-session -t fn
 - All Kali Linux
 - All Virtualization
 - 1vCPU 1GB Ram 10GB SSD
-- 
 </details>
 
 <b><details><summary>Other Detail</summary></b>
