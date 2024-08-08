@@ -89,12 +89,14 @@ TCP SSL / HTTPS    : 8443
 
 # Other
 ```
-- API     : -
-- Nginx   : -
-- SSLH    : 8062
-- gRPC    : 443
-- BadVPN  : 7300
-- SlowDNS : 5300, 5353
+- API        : -
+- Nginx      : -
+- SSLH       : 8062
+- gRPC       : 443
+- BadVPN     : 7300
+- SlowDNS    : 5300, 5353
+- Chisel TLS : 9443
+- Chisel HTTP: 8000
 ```
 
 # PATH SSH
@@ -153,6 +155,8 @@ TCP SSL / HTTPS : /custom | /noobz
 - Update Kernel OS New Version
 - Backup & Restore Via Link & FTP
 - Plugin Hide SSH store
+- Report Bug to Admin
+- Certificate Default / IPv4 + IPv6
 ```
 </details>
 
@@ -292,6 +296,7 @@ Example Log:
 `METHOD: POST`
 ```
 - /addssh      [ Create SSH Account ]
+- /add-noobz   [ Create NoobzVPN Account ]
 - /add-vmess   [ Create Vmess Account ]
 - /add-vless   [ Create Vless Account ]
 - /add-trojan  [ Create Trojan Account ]
@@ -303,6 +308,7 @@ Example Log:
 `METHOD: DELETE`
 ```
 - /delete-ssh  [ Delete SSH Account Only ]
+- /delete-noobz [ Delete NoobzVPN Only ]
 - /delete-xray [ Delete X-Ray Account ]
 - X-RAY:
          - Vmess
@@ -317,6 +323,7 @@ Example Log:
 ```
 - /list-ssh [ SSH Account Active ]
 - /list-xray [ X-Ray Account Active ]
+- /list-noobz [ NoobzVPN Account Active ]
 ```
 
 ### Cek User Login
@@ -337,11 +344,13 @@ https://rerechan.ai/api/addssh
 `create`
 ```
 SSH: username, password, expired
+Noobz: username, password, expired
 X-Ray: username, expired
 ```
 `delete`
 ```
 ssh: username
+noobz: username
 xray: username
 ```
 `cek login`
