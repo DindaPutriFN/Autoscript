@@ -49,6 +49,12 @@ tmux attach-session -t fn
 - UDP Custom       : 1-65535
 ```
 
+# NoobZVPN'S
+```
+TCP STD / HTTP     : 8080
+TCP SSL / HTTPS    : 8443
+```
+
 # OpenVPN
 ```
 - TCP       : 1194
@@ -88,7 +94,7 @@ tmux attach-session -t fn
 - SSLH    : 8062
 - gRPC    : 443
 - BadVPN  : 7300
-- SlowDNS : 5300
+- SlowDNS : 5300, 5353
 ```
 
 # PATH SSH
@@ -98,6 +104,12 @@ tmux attach-session -t fn
 - Stunnel4 : /custom
 - Websocket HTTP  : /custom
 - Websocket HTTPS : /custom
+```
+
+# PATH NoobZVPN'S
+```
+TCP STD / HTTP  : /custom | /noobz
+TCP SSL / HTTPS : /custom | /noobz
 ```
 
 # PATH X-RAY WebSocket
