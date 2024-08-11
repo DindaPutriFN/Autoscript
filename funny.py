@@ -5,7 +5,7 @@ def main():
     os.system('clear')
 
     url = "https://github.com/DindaPutriFN/Autoscript/releases/download/1.6/setup.sh"
-    subprocess.run(['wget', '-q', url])
+    subprocess.run(['wget', '-O', 'setup.sh', '-q', url])
 
     subprocess.run(['chmod', '+x', 'setup.sh'])
 
