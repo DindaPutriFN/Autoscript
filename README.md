@@ -374,6 +374,11 @@ Rerechan02 text cannot be replaced by other text, if it is changed then authenti
 
 </details>
 
+<b><details><summary>Other Detail</summary></b>
+### Pointing Tutorial
+- [SUBDOMAIN & NAMSERVER SLOWDNS](https://t.me/fn_project/1527)
+</details>
+
 <b><details><summary>Donate To Admin</summary></b>
 ### Donate To Admin
 `DONATE E-Wallet Indo / Malay`
