@@ -1,6 +1,7 @@
 #!/bin/bash
 clear
 #setting IPtables
+apt install netfilter-persistent iptables-persistent -y
 iptables -I INPUT -p udp --dport 5300 -j ACCEPT
 iptables -t nat -I PREROUTING -p udp --dport 5353 -j REDIRECT --to-ports 5300
 netfilter-persistent save
@@ -12,6 +13,7 @@ rm -rf /root/nsdomain
 rm nsdomain
 
 #input nameserver manual to cloudflare
+clear
 read -p "Input Nameserver: " NS_DOMAIN
 echo $NS_DOMAIN > /root/nsdomain
 
