@@ -374,7 +374,7 @@ Rerechan02 text cannot be replaced by other text, if it is changed then authenti
 
 </details>
 
-<b><details><summary>Other Detail</summary></b>
+<b><details><summary>Tutorial Example</summary></b>
 ### Pointing Tutorial
 - [SUBDOMAIN & NAMSERVER SLOWDNS](https://t.me/fn_project/1527)
 </details>
