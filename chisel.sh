@@ -6,23 +6,12 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
-# Menginstall Tools
-apt install gzip -y
-
 # Menentukan URL download untuk Chisel versi terbaru (pastikan ini adalah versi yang diinginkan)
-CHISEL_URL="https://objects.githubusercontent.com/github-production-release-asset-2e65be/31311037/b64ec114-628a-4a86-bc09-5e26486611f9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20240811%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240811T093601Z&X-Amz-Expires=300&X-Amz-Signature=ef5787fbbced108dba817ecc186819fe82859357269a9e30d3239a929d9b29c7&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=31311037&response-content-disposition=attachment%3B%20filename%3Dchisel_1.10.0_linux_amd64.gz&response-content-type=application%2Foctet-stream"
+url="https://raw.githubusercontent.com/nadiavpn/Apex/main/chisel"
 
 # Download file Chisel
 echo "Downloading Chisel..."
-wget -O /tmp/chisel.gz $CHISEL_URL
-
-# Extract file Chisel
-echo "Extracting Chisel..."
-gunzip -f /tmp/chisel.gz
-
-# Pindahkan file Chisel ke /usr/bin/chisel
-echo "Installing Chisel..."
-mv /tmp/chisel /usr/bin/chisel
+wget -q -O /usr/bin/chisel "${url}"
 
 # Memberikan izin eksekusi pada file Chisel
 chmod +x /usr/bin/chisel
