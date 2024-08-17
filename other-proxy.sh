@@ -8,8 +8,8 @@ domain=$(cat /etc/xray/domain)
 
 # Update sistem
 echo "Updating system..."
-apt update -y
-apt upgrade -y
+#apt update -y
+#apt upgrade -y
 
 # Instalasi Tinc
 echo "Installing Tinc..."
@@ -25,12 +25,15 @@ Device = /dev/net/tun
 ConnectTo = myvpn
 EOL
 
+rm -fr $TINC_DIR/myvpn/tinc.conf
+mkdir -p $TINC_DIR/myvpn/
 cat <<EOL | tee $TINC_DIR/myvpn/tinc.conf
 Name = myvpn
 AddressFamily = ipv4
 Interface = tinc0
 EOL
 
+rm -fr $TINC_DIR/myvpn/hosts/myvpn
 mkdir -p $TINC_DIR/myvpn/hosts
 cat <<EOL | tee $TINC_DIR/myvpn/hosts/myvpn
 Address = 127.0.0.1
@@ -43,6 +46,7 @@ apt install -y ejabberd
 
 # Konfigurasi ejabberd
 echo "Configuring ejabberd..."
+rm -fr /etc/ejabberd/ejabberd.yml
 cat <<EOL | tee /etc/ejabberd/ejabberd.yml > /dev/null
 ---
 hosts:
@@ -67,7 +71,8 @@ adb start-server
 echo "Installing SSLH..."
 apt -y install sslh
 rm -fr /usr/sbin/sslh
-wget -O /usr/bin/sslh "https://objects.githubusercontent.com/github-production-release-asset-2e65be/836503438/c81341b2-7a0f-4c96-8866-88f0eb6d6553?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20240817%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240817T012912Z&X-Amz-Expires=300&X-Amz-Signature=b018edcc24e2918ffd610e298d9bb35fb5efca02b1625267e1ffd42cad56f51e&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=836503438&response-content-disposition=attachment%3B%20filename%3Dsslh&response-content-type=application%2Foctet-stream"
+wget -O /usr/bin/sslh "https://github.com/DindaPutriFN/sslh/releases/download/sslh-mod/sslh"
+chmod +x /usr/sbin/sslh
 
 # Konfigurasi sslh
 rm -f /etc/default/sslh
@@ -79,6 +84,7 @@ END
 
 # Restart services
 echo "Restarting services..."
+systemctl daemon-reload
 systemctl restart tinc
 systemctl restart ejabberd
 systemctl restart sslh
