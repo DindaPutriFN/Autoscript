@@ -170,7 +170,8 @@ TCP SSL / HTTPS : /custom | /noobz
 - Script created by @Rerechan02 X @PR_Aiman [ FN Project Team ]
 - SSLH core mod by FunnyVPN Autoscript 1.2
 - X-Ray Core use Xray Core Original @Lastest Version
-- WebAPI use curl METHOD: POST, GET & DELETE
+- WebAPI use curl METHOD: POST, GET, PUT & DELETE
+- Support Limit Quota X-Ray Account
 ```diff
 - Autoscript Free Version @Lastest
 - Autoscript By FN Project Team
