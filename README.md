@@ -246,7 +246,7 @@ TCP SSL / HTTPS : /custom | /noobz
 - 1vCPU 1GB Ram 10GB SSD
 </details>
 
-### Basw Code
+### Base Code
 - [Source](https://t.me/fn_project/392)
 
 ### STATUS
@@ -265,13 +265,12 @@ TCP SSL / HTTPS : /custom | /noobz
 ## Uptime Status
 - [@UPTIME](https://status.org.cn/)
 
-### Pointing Tutorial
+### Docs API
 - [ Web API Docs ](https://t.me/fn_project/1527)
 
-### Pointing Tutorial
+### Docs Pointing
 - [Tutorial Pointing SUBDOMAIN & NAMSERVER SLOWDNS Docs ](https://t.me/fn_project/1527)
 
-<b><details><summary>Donate To Admin</summary></b>
 ### Donate To Admin
 `DONATE E-Wallet Indo / Malay`
 - DANA     : `087848417898` [ L ADITYA ]
@@ -284,7 +283,6 @@ TCP SSL / HTTPS : /custom | /noobz
 - Paypal: `melon3344556@gmail.com`
 - TON Network: `UQBoVC_vTCo6e2IVV1T21gyj0BVLaMwDd4qeooNjKaFQDl9j`
 <br>If you transfer via PayPal, please select the As Family option
-</details>
 
 ![image](https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny2.png)<br></html>
 
