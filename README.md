@@ -10,7 +10,7 @@
 
 ![Rerechan02 card name](https://cardivo.vercel.app/api?name=Rerechan02『𝐅𝐍』&description=Hi,%20everyone!%20and%20Nice%20to%20meet%20you%20%F0%9F%91%8B&image=https://raw.githubusercontent.com/Rerechan02/simple-xray/main/funny1.jpg?v=4&backgroundColor=%23ecf0f1&telegram=/&github=Rerechan02&pattern=leaf&colorPattern=%23eaeaea)
 
-<b><details><summary>Install Script</summary></b>
+### Install
 `things needed before installing`
 ```
 - Virtual Private Server [ VPS ]
@@ -32,8 +32,7 @@ wget https://raw.githubusercontent.com/DindaPutriFN/Autoscript/main/funny.py; ch
 ***If there is a disconnection during installation***
  ```
 tmux attach-session -t fn
- ```
-</details>
+```
 
 <b><details><summary>Service & Port</summary></b> 
  <p align="center">
