@@ -1,61 +1,56 @@
 #!/bin/bash
+#
+#  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
+#  • Autoscript AIO Lite Menu By FN Project                                          |
+#  • FN Project Developer @Rerechan02 | @PR_Aiman | @farell_aditya_ardian            |
+#  • Copyright 2024 18 Marc Indonesia [ Kebumen ] | [ Johor ] | [ 上海，中国 ]       |
+#  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
+#
 
-# [ Installer Slowdns By Rerechan02 ]
-echo "--------------------------------------------"
-echo " Auto Script Installer DNSTT By Rerechan02"
-echo "--------------------------------------------"
-read -p "Input NameServer Slownds: " nameserver
+# Install Tools
+apt install iptables -y
+apt install wget -y
+apt install screen -y
 
-clear
-echo "           [*] Install PACKAGE...."
-
-# Install Package
-sleep 2
-yes | sudo apt-get install nano -y >/dev/null 2>&1;
-yes | sudo apt-get install g++ -y >/dev/null 2>&1;
-yes | sudo apt-get install git -y >/dev/null 2>&1;
-yes | sudo apt-get install -y iptables -y >/dev/null 2>&1;
-yes | sudo apt-get install net-tools-y >/dev/null 2>&1;
-yes | apt-get -y install iptables iptables-services -y >/dev/null 2>&1;
-yes | apt-get install screen wget gcc build-essential g++ make -y >/dev/null 2>&1;
-yes | sudo apt-get install wget -y >/dev/null 2>&1;
-yes | apt-get install nload -y >/dev/null 2>&1;
-yes | sudo apt-get --purge remove apache2 -y >/dev/null 2>&1;
-yes | apt-get install software-properties-common -y >/dev/null 2>&1;
-yes | apt install build-essential gcc make -y >/dev/null 2>&1;
+# Clear Screen
 clear
 
-# Install Slowdns
-echo "           [*] DNSTT"
+# Copy Core SlowDNS
+wget -q --no-check-certificate -O /usr/sbin/dns-server "https://raw.githubusercontent.com/potatonc/webmin/master/dns-server"
+chmod +x /usr/sbin/dns-server
+
+# Key for Slowdns
+skey="79165a5f041150b665db82f16d33be2664749ea5dd0e90c62c1ff99de02a375d"
+spub="5bb04eb5c1d8e8ced2feefd2a3b7e4d57cf648dce0d5a225ac62197729336f50"
+
+# Input NameServer
+clear
+echo -e "
+========================
+SlowDNS / DNSTT Settings
+========================"
+read -rp " Your Nameserver : " -e Nameserver
+clear
+
+# Delete Old Data
 rm -fr /etc/slowdns
-mkdir -p /etc/slowdns
-echo "$nameserver" > /etc/slowdns/nsdomain
-echo "$nameserver" > /etc/slowdns/nameserver
-echo "$nameserver" > /root/nsdomain
-apt install git -y >/dev/null 2>&1;
-wget "https://raw.githubusercontent.com/scriptvpskita/list-version/main/dns-server" -O /usr/local/bin/dnstt-server
-sleep 2
-chmod +x /usr/local/bin/dnstt-server
-sleep 1
-/usr/local/bin/dnstt-server -gen-key -privkey-file /etc/slowdns/server.key -pubkey-file /etc/slowdns/server.pub
 
-# Install Service
-echo "           [*] DNSTT Install Service"
-clear
-cat <<EOF > /etc/systemd/system/dnstt.service
-[Unit]
-Description=Slowdns DNSTT By FN Project
-Wants=network.target
-After=network.target
-[Service]
-ExecStart=/usr/local/bin/dnstt-server -udp :5300 -privkey-file /etc/slowdns/server.key $nameserver 127.0.0.1:109
-Restart=always
-RestartSec=3
-[Install]
-WantedBy=multi-user.target
-EOF
-systemctl daemon-reload
-systemctl enable dnstt
-systemctl restart dnstt
-systemctl start dnstt
-clear
+# Create New Repo Data
+mkdir -p /etc/slowdns
+
+# Save Data
+echo "$skey" >> /etc/slowdns/server.key
+echo "$spub" >> /etc/slowdns/server.pub
+echo "$Nameserver" >> /etc/slowdns/nsdomain
+
+
+# Run Open Port
+iptables -I INPUT -p udp --dport 5300 -j ACCEPT
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+
+# Run SlowDNS
+PID_Screen=$(screen -ls | grep -w "slowdns" | awk '{print $1}' | cut -d. -f1)
+if [ -n "$PID_Screen" ]; then
+    screen -X -S ${PID_Screen} quit
+fi
+screen -dmS slowdns dns-server -udp :5300 -privkey ${skey} ${Nameserver} 127.0.0.1:111
