@@ -60,7 +60,9 @@ TCP SSL / HTTPS    : 8443
 - UDP       : 2200
 - WebSocket HTTPS : 443
 - WebSocket HTTP  : 80
-- SSL/TLS/STUNNEL : 443 
+- SSL/TLS/STUNNEL : 443
+- HTTP PROXY      : 8888
+- OHP SERVER      : 8181, 8282, 8383
 ```
 
 # X-Ray WebSocket
