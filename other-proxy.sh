@@ -82,6 +82,13 @@ DAEMON=/usr/sbin/sslh
 DAEMON_OPTS="--listen 0.0.0.0:443 --tls 127.0.0.1:777 --http 127.0.0.1:700 --openvpn 127.0.0.1:1194 --xmpp 127.0.0.1:5222 --tinc 127.0.0.1:655 --adb 127.0.0.1:5037 --ssh 127.0.0.1:3303 --anyprot 127.0.0.1:443 --pidfile /var/run/sslh/sslh.pid -n"
 END
 
+# Memprbaiki Pid SSLH
+clear
+rm -fr /var/run/sslh
+mkdir -p /var/run/sslh
+touch /var/run/sslh/sslh.pid
+chmod +x 777 /var/run/sslh/sslh.pid
+
 # Restart services
 echo "Restarting services..."
 systemctl daemon-reload
