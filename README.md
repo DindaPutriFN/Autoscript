@@ -74,20 +74,6 @@ TCP SSL / HTTPS    : 8443
 - Shadowsocks : 80, 443
 ```
 
-# X-Ray HTTP UPGRADE
-```
-- Vmess  : 443, 80
-- Vless  : 443, 80
-- Trojan : 443, 80
-```
-
-# X-Ray Split HTTP
-```
-- Vmess  : 443, 80
-- Vless  : 443, 80
-- Trojan : 443, 80
-```
-
 # Other
 ```
 - API        : -
@@ -122,20 +108,6 @@ TCP SSL / HTTPS : /custom | /noobz
 - Trojan      : /trojan | /trojanws
 - Socks5      : /socks5 | /socks5ws
 - Shadowsocks : /ssws
-```
-
-# PATH X-RAY HTTPUPGRADE
-```
-- Vmess  : /love  | /love-dinda
-- Vless  : /rere  | /rere-cantik
-- Trojan : /dinda | /dindaputri  | /dinda-cantik
-```
-
-# PATH X-Ray Split HTTP
-```
-- Vmess  : /vmess-split
-- Vless  : /vless-split
-- Trojan : /trojan-split
 ```
 
 # Core All Service
