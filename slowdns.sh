@@ -50,7 +50,7 @@ SlowDNS / DNSTT Settings
 
   cat >/etc/systemd/system/dnstt.service <<END
 [Unit]
-Description=SlowDNS RasCom Autoscript Service
+Description=SlowDNS FN Project Autoscript Service
 Documentation=https://t.me/fn_project
 After=network.target nss-lookup.target
 
