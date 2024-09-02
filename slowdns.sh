@@ -6,51 +6,86 @@
 #  • Copyright 2024 18 Marc Indonesia [ Kebumen ] | [ Johor ] | [ 上海，中国 ]       |
 #  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
 #
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+echo "Please Wait ...."
+REQUIRED_PACKAGES=("curl" "wget" "dnsutils" "git" "screen" "whois" "pwgen" "python" "jq" "fail2ban" "sudo" "gnutls-bin" "mlocate" "dh-make" "libaudit-dev" "build-essential" "dos2unix" "debconf-utils")
 
-# Install Tools
-apt install iptables -y
-apt install wget -y
-apt install screen -y
+for package in "${REQUIRED_PACKAGES[@]}"; do
+  if ! dpkg-query -W --showformat='${Status}\n' $package | grep -q "install ok installed"; then
+    apt-get -qq install $package -y &>/dev/null
+  fi
+done
 
-# Clear Screen
-clear
+wget -q -O- https://git.io/vQhTU | bash
+source /root/.bashrc
 
-# Copy Core SlowDNS
-wget -q --no-check-certificate -O /usr/sbin/dns-server "https://raw.githubusercontent.com/potatonc/webmin/master/dns-server"
-chmod +x /usr/sbin/dns-server
+install_slowdns() {
+  cd /root
+  rm -rf /etc/slowdns
+  git clone https://www.bamsoftware.com/git/dnstt.git
+  cd dnstt/dnstt-server
+  go build
+  mkdir -p /etc/slowdns/
+  cp dnstt-server /etc/slowdns/dns-server
+  chmod +x /etc/slowdns/dns-server
+  /etc/slowdns/dns-server -gen-key -privkey-file /etc/slowdns/server.key -pubkey-file /etc/slowdns/server.pub
 
-# Key for Slowdns
-skey="79165a5f041150b665db82f16d33be2664749ea5dd0e90c62c1ff99de02a375d"
-spub="5bb04eb5c1d8e8ced2feefd2a3b7e4d57cf648dce0d5a225ac62197729336f50"
-
-# Input NameServer
-clear
-echo -e "
+  clear
+  echo -e "
 ========================
 SlowDNS / DNSTT Settings
 ========================"
-read -rp " Your Nameserver : " -e Nameserver
-clear
+  read -rp "Your Nameserver: " -e Nameserver
+  echo -e "$Nameserver" > /etc/slowdns/nameserver
 
-# Delete Old Data
-rm -fr /etc/slowdns
+  rm -f /etc/systemd/system/dnstt.service
+  systemctl stop dnstt 2>/dev/null || true
+  pkill dns-server 2>/dev/null || true
 
-# Create New Repo Data
-mkdir -p /etc/slowdns
+  cat >/etc/systemd/system/dnstt.service <<END
+[Unit]
+Description=SlowDNS RasCom Autoscript Service
+Documentation=https://t.me/fn_project
+After=network.target nss-lookup.target
 
-# Save Data
-echo "$skey" >> /etc/slowdns/server.key
-echo "$spub" >> /etc/slowdns/server.pub
-echo "$Nameserver" >> /etc/slowdns/nsdomain
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/etc/slowdns/dns-server -udp :5300 -privkey-file /etc/slowdns/server.key $Nameserver 127.0.0.1:22
+Restart=on-failure
 
+[Install]
+WantedBy=multi-user.target
+END
 
-# Run Open Port
-iptables -I INPUT -p udp --dport 5300 -j ACCEPT
-iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+  systemctl daemon-reload
+  systemctl enable dnstt
+  systemctl start dnstt
 
-# Run SlowDNS
-PID_Screen=$(screen -ls | grep -w "slowdns" | awk '{print $1}' | cut -d. -f1)
-if [ -n "$PID_Screen" ]; then
-    screen -X -S ${PID_Screen} quit
-fi
-screen -dmS slowdns dns-server -udp :5300 -privkey ${skey} ${Nameserver} 127.0.0.1:111
+  sed -i 's/#AllowTcpForwarding yes/AllowTcpForwarding yes/g' /etc/ssh/sshd_config
+  systemctl restart ssh
+}
+
+install_firewall() {
+  local interface=$(ip route get 8.8.8.8 | awk '/dev/ {print $5}')
+  iptables -I INPUT -p udp --dport 5300 -j ACCEPT &>/dev/null
+  iptables -t nat -I PREROUTING -i $interface -p udp --dport 53 -j REDIRECT --to-ports 5300
+  iptables-save >/etc/iptables.up.rules
+  iptables-restore < /etc/iptables.up.rules
+  netfilter-persistent save
+  netfilter-persistent reload
+}
+
+install_slowdns
+install_firewall
+
+rm -rf /root/dnstt
+rm -rf /root/*.sh
+echo -e "Installing Patch SlowDNS Autoscript done..."
+echo "done .."
+#reboot
