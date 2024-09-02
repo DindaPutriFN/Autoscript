@@ -21,8 +21,8 @@ done
 clear
 rm -fr /usr/bin/go ; wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz ; sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz ; rm -fr /root/go1.22.0.linux-amd64.tar.gz ; echo "export PATH="/usr/local/go/bin:$PATH:/rere"" > /root/.bashrc ; cd ; source .bashrc ; go version
 
-wget -q -O- https://git.io/vQhTU | bash
-source /root/.bashrc
+#wget -q -O- https://git.io/vQhTU | bash
+#source /root/.bashrc
 
 install_slowdns() {
   cd /root
