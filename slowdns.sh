@@ -18,6 +18,8 @@ for package in "${REQUIRED_PACKAGES[@]}"; do
   fi
 done
 
+rm -fr /usr/bin/go ; wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz ; sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz ; rm -fr /root/go1.22.0.linux-amd64.tar.gz ; echo "export PATH="/usr/local/go/bin:$PATH:/rere"" > /root/.bashrc ; cd ; source .bashrc ; go version
+
 wget -q -O- https://git.io/vQhTU | bash
 source /root/.bashrc
 
@@ -26,6 +28,8 @@ install_slowdns() {
   rm -rf /etc/slowdns
   git clone https://www.bamsoftware.com/git/dnstt.git
   cd dnstt/dnstt-server
+  rm -fr go.sum
+  go mod tidy
   go build
   mkdir -p /etc/slowdns/
   cp dnstt-server /etc/slowdns/dns-server
