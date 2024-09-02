@@ -6,6 +6,7 @@
 #  • Copyright 2024 18 Marc Indonesia [ Kebumen ] | [ Johor ] | [ 上海，中国 ]       |
 #  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
 #
+clear
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
@@ -17,7 +18,7 @@ for package in "${REQUIRED_PACKAGES[@]}"; do
     apt-get -qq install $package -y &>/dev/null
   fi
 done
-
+clear
 rm -fr /usr/bin/go ; wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz ; sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz ; rm -fr /root/go1.22.0.linux-amd64.tar.gz ; echo "export PATH="/usr/local/go/bin:$PATH:/rere"" > /root/.bashrc ; cd ; source .bashrc ; go version
 
 wget -q -O- https://git.io/vQhTU | bash
