@@ -91,6 +91,8 @@ install_firewall
 
 rm -rf /root/slowdns.sh
 #rm -rf /root/*.sh
+clear
+echo -e ""
 echo -e "Installing Patch SlowDNS Autoscript done..."
 echo "done .."
 #reboot
