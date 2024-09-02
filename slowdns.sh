@@ -32,7 +32,7 @@ install_slowdns() {
   go mod tidy
   go build
   mkdir -p /etc/slowdns/
-  cp dnstt-server /etc/slowdns/dns-server
+  mv dnstt-server /etc/slowdns/dns-server
   chmod +x /etc/slowdns/dns-server
   /etc/slowdns/dns-server -gen-key -privkey-file /etc/slowdns/server.key -pubkey-file /etc/slowdns/server.pub
 
