@@ -131,6 +131,8 @@ TCP SSL / HTTPS : /custom | /noobz
 - Report Bug to Admin
 - Certificate Default / IPv4 + IPv6
 - Limit Quota & Cek total usage quota xray
+- Limit IP SSH Auto Lock 15 Minutes
+- Trial Account With 60M Acitive
 ```
 </details>
 
