@@ -168,31 +168,31 @@ TCP SSL / HTTPS : /custom | /noobz
 <b><details><summary>System Support</summary></b> 
 ### System Support
 # Debian:
-- 9 ( Stretch )
-- 10 ( Buster )
-- 11 ( Bullseye	 )
-- 12 ( Bookworm	 )
-- 13 ( Trixie	 )
-- 14 ( Forky )
+- 9 ( Stretch ) [@Unstable]
+- 10 ( Buster ) [@Stable]
+- 11 ( Bullseye	 ) [@Stable]
+- 12 ( Bookworm	 ) [@Error]
+- 13 ( Trixie	 ) [@ComingSoon]
+- 14 ( Forky ) [@ComingSoon]
 
 # Ubuntu:
-- 18.04 LTS ( Bionic )
-- 18.10 ( Cosmic )
-- 19.04 ( Disco )
-- 19.10 ( Eoan )
-- 20.04 LTS ( Focal )
-- 20.10 ( Giroovy )
-- 21.04 ( Hirsute )
-- 21.10 ( Impish )
-- 22.04 LTS ( Jammy )
-- 22.10 ( Kinetic )
-- 23.04 ( Lunar )
-- 23.10 ( Mantic )
-- 24.04 LTS ( Noble )
-- 24.10 ( Oracular )
+- 18.04 LTS ( Bionic ) [@Unstable]
+- 18.10 ( Cosmic ) [@Unstable]
+- 19.04 ( Disco ) [@Unstable]
+- 19.10 ( Eoan ) [@Unstable]
+- 20.04 LTS ( Focal ) [@Stable]
+- 20.10 ( Giroovy ) [@Stable]
+- 21.04 ( Hirsute ) [@Stable]
+- 21.10 ( Impish ) [@Stable]
+- 22.04 LTS ( Jammy ) [@Stable]
+- 22.10 ( Kinetic ) [@Stable]
+- 23.04 ( Lunar ) [@Unstable]
+- 23.10 ( Mantic ) [@Unstable]
+- 24.04 LTS ( Noble ) [@Error]
+- 24.10 ( Oracular ) [@Error]
 
 # Kali:
-- Kali Linux Rolling
+- Kali Linux Rolling [@Stable]
 
 # Virtualization:
 - Xen
@@ -207,13 +207,13 @@ TCP SSL / HTTPS : /custom | /noobz
 - ZFS
 
 # Minimum Specifications:
-- Ram 512MB
-- SSD 10GB
-- 1vCPU
+- Ram 512MB [@Stable]
+- SSD 10GB [@Stable]
+- 1vCPU [@Stable]
 
 # Recomended
-- All Ubuntu
-- Debian 9/10/11
+- All Ubuntu < 24.04 LTS
+- All Debian < 12
 - All Kali Linux
 - All Virtualization
 - 1vCPU 1GB Ram 10GB SSD
