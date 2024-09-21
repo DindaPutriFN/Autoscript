@@ -74,6 +74,11 @@ TCP SSL / HTTPS    : 8443
 - Shadowsocks : 80, 443
 ```
 
+# TROJAN GO
+```
+- Trojan Go Websocket TLS  : 2087
+```
+
 # Other
 ```
 - API        : -
@@ -110,6 +115,11 @@ TCP SSL / HTTPS : /custom | /noobz
 - Shadowsocks : /ssws
 ```
 
+# PATH TROJAN GO
+```
+- Trojan Go   : /trojango
+```
+
 # Core All Service
 ```
 - Websocket Python
@@ -117,6 +127,7 @@ TCP SSL / HTTPS : /custom | /noobz
 - Websocket WsEpro
 - SSLH Fork Original Core
 - X-Ray Default Core @Lastest
+- Trojan Go / Igniter Go Mod
 - Proxy Server Python3
 ```
 
