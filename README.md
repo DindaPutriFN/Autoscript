@@ -134,7 +134,9 @@ TCP SSL / HTTPS : /custom | /noobz
 # Feature
 ```
 - Cek Usage | htop
-- Bot Notification
+- Bot Notification telegram
+- Bot Terminal telegram
+- Bot Panel telegram
 - Change Timezone Server
 - Update Kernel OS New Version
 - Backup & Restore Via Link & FTP
