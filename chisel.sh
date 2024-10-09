@@ -10,21 +10,21 @@ fi
 url="https://raw.githubusercontent.com/nadiavpn/Apex/main/chisel"
 
 # Download file Chisel
-echo "Downloading Chisel..."
-wget -q -O /usr/bin/chisel "${url}"
+echo "Downloading Chisell..."
+wget -q -O /usr/bin/chisell "${url}"
 
 # Memberikan izin eksekusi pada file Chisel
-chmod +x /usr/bin/chisel
+chmod +x /usr/bin/chisell
 
 # Membuat file service systemd untuk Chisel di port 9443 (HTTPS)
 echo "Creating systemd service for Chisel SSL (port 9443)..."
-cat <<EOF > /etc/systemd/system/chisel-ssl.service
+cat <<EOF > /etc/systemd/system/chisell-ssl.service
 [Unit]
 Description=Chisel Server SSL By FN Project
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/chisel server --port 9443 --tls-key /etc/xray/xray.key --tls-cert /etc/xray/xray.crt --socks5
+ExecStart=/usr/bin/chisell server --port 9443 --tls-key /etc/xray/xray.key --tls-cert /etc/xray/xray.crt --socks5
 Restart=always
 User=nobody
 Group=nogroup
@@ -35,13 +35,13 @@ EOF
 
 # Membuat file service systemd untuk Chisel di port 8000 (HTTP)
 echo "Creating systemd service for Chisel HTTP (port 8000)..."
-cat <<EOF > /etc/systemd/system/chisel-http.service
+cat <<EOF > /etc/systemd/system/chisell-http.service
 [Unit]
 Description=Chisel Server HTTP By FN Project
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/chisel server --port 8000 --socks5
+ExecStart=/usr/bin/chisell server --port 8000 --socks5
 Restart=always
 User=nobody
 Group=nogroup
@@ -56,17 +56,21 @@ systemctl daemon-reload
 
 # Mengaktifkan dan memulai service Chisel SSL (port 9443)
 echo "Enabling and starting Chisel SSL service..."
-systemctl enable chisel-ssl.service
-systemctl start chisel-ssl.service
+systemctl enable chisell-ssl.service
+systemctl start chisell-ssl.service
 
 # Mengaktifkan dan memulai service Chisel HTTP (port 8000)
 echo "Enabling and starting Chisel HTTP service..."
-systemctl enable chisel-http.service
-systemctl start chisel-http.service
+systemctl enable chisell-http.service
+systemctl start chisell-http.service
 
 #Merestart layanan
-systemctl restart chisel-http.service
-systemctl restart chisel-ssl.service
+sudo iptables -A INPUT -p tcp --dport 8000 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 9443 -j ACCEPT
+sudo ufw allow 8000/tcp
+sudo ufw allow 9443/tcp
+systemctl restart chisell-http.service
+systemctl restart chisell-ssl.service
 
 # Membersihkan layar
 rm -fr chisel.sh
