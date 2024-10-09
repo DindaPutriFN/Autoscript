@@ -78,6 +78,7 @@ END
 
 install_firewall() {
   local interface=$(ip route get 8.8.8.8 | awk '/dev/ {print $5}')
+  sudo ufw allow 5300/udp
   iptables -I INPUT -p udp --dport 5300 -j ACCEPT &>/dev/null
   iptables -t nat -I PREROUTING -i $interface -p udp --dport 53 -j REDIRECT --to-ports 5300
   iptables-save >/etc/iptables.up.rules
