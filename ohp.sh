@@ -71,11 +71,31 @@ LimitNOFILE=infinity
 WantedBy=multi-user.target
 END
 
+sudo iptables -A INPUT -p tcp --dport 8181 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8282 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8383 -j ACCEPT
+sudo ufw allow 8383/tcp
+sudo ufw allow 8181/tcp
+sudo ufw allow 8282/tcp
+
+# Daemon
 systemctl daemon-reload
+
+# Enable
 systemctl enable ssh-ohp
-systemctl restart ssh-ohp
 systemctl enable dropbear-ohp
-systemctl restart dropbear-ohp
 systemctl enable openvpn-ohp
+
+# Firewall
+sudo iptables -A INPUT -p tcp --dport 8181 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8282 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8383 -j ACCEPT
+sudo ufw allow 8383/tcp
+sudo ufw allow 8181/tcp
+sudo ufw allow 8282/tcp
+
+# Restart
 systemctl restart openvpn-ohp
+systemctl restart dropbear-ohp
+systemctl restart ssh-ohp
 clear
